@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [price, setPrice] = useState(0);
+
+  const handleRangeSlider = (event) => {
+    setPrice(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
+      <div>
+        <div>
+          <p>100k PageViews</p>
+          <p>£{price}/month</p>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value={price}
+            onChange={handleRangeSlider}
+          />
+        </div>
+      </div>
     </div>
   );
 }
