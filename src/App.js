@@ -1,10 +1,17 @@
 import { useState } from "react";
+import Switch from "react-switch";
 
 function App() {
   const [price, setPrice] = useState(0);
+  const [check, setCheck] = useState(false);
 
   const handleRangeSlider = (event) => {
     setPrice(event.target.value);
+  };
+
+  const handleChange = () => {
+    setCheck(!check);
+    console.log(check);
   };
 
   return (
@@ -26,11 +33,18 @@ function App() {
             onChange={handleRangeSlider}
           />
           <div>
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider"></span>
+            <p>monthly billing</p>
+            <label>
+              <Switch
+                onChange={handleChange}
+                checked={check}
+                uncheckedIcon={false}
+                checkedIcon={false}
+              />
             </label>
+            <p>yearly billing</p>
           </div>
+          <p> checked value: {check.toString()}</p>
         </div>
       </div>
     </div>
