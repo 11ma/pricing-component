@@ -5,6 +5,7 @@
   align-items: center;
 
   .Intro {
+    border: 1px solid black;
     h1 {
       font-size: 30px;
       font-weight: 800;
@@ -16,11 +17,12 @@
 
   .PricingBody {
     border: 1px solid black;
-    // padding: 10px;
+    // padding: 50px;
   }
 
   .InfoBody {
     display: flex;
+    justify-content: space-around;
   }
 
   .InfoText {
@@ -30,11 +32,17 @@
 
   .InfoText > * {
     display: flex;
+    align-items: center;
+  }
+
+  .InfoText,
+  li > * {
+    margin: 10px;
   }
 
   .InfoText,
   img {
-    font-size: 15px;
+    height: 15px;
   }
 }
 

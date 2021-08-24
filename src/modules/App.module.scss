@@ -2,21 +2,5 @@
 
 body {
   font-family: "Manrope", sans-serif;
-}
-
-.Container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .Intro {
-    h1 {
-      font-size: 30px;
-      font-weight: 800;
-    }
-    p {
-      font-size: 15px;
-    }
-  }
+  background-color: hsl(230, 100%, 99%);
 }
