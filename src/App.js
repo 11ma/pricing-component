@@ -1,8 +1,9 @@
 import PricingComponent from "./components/PricingComponent";
 
+import "./App.css";
+
 const App = () => (
   <div>
-    <p>Hello from test branch</p>
     <PricingComponent />
   </div>
 );
