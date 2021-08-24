@@ -22,6 +22,20 @@
   .InfoBody {
     display: flex;
   }
+
+  .InfoText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .InfoText > * {
+    display: flex;
+  }
+
+  .InfoText,
+  img {
+    font-size: 15px;
+  }
 }
 
 .Container > * {
