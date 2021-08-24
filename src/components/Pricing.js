@@ -8,6 +8,7 @@ import {
   Price,
   MonthYear,
   Slider,
+  Billings,
 } from "../modules/Pricing.module.scss";
 
 const Pricing = () => {
@@ -16,8 +17,7 @@ const Pricing = () => {
 
   const handleRangeSlider = (event) => {
     const priceValue = Number.parseFloat(event.target.value);
-    // setPrice(priceValue);
-    console.log(priceValue.toString());
+    setPrice(priceValue);
   };
 
   const handleChange = () => {
@@ -37,8 +37,10 @@ const Pricing = () => {
       <div className={PriceContainer}>
         <p className={PageViews}>100K PAGEVIEWS</p>
         <p>
-          <span className={Price}>£{applyDiscount()}</span>/
-          <span className={MonthYear}>{checkMonthOrYear()}</span>
+          <span className={Price}>
+            £{Number.parseFloat(applyDiscount()).toFixed(2)}
+          </span>
+          /<span className={MonthYear}>{checkMonthOrYear()}</span>
         </p>
       </div>
       <input
@@ -47,10 +49,10 @@ const Pricing = () => {
         min="13"
         step="3"
         max="19"
-        value={price.toFixed(2)}
+        value={price}
         onChange={handleRangeSlider}
       />
-      <div>
+      <div className={Billings}>
         <p>monthly billing</p>
         <label>
           <Switch

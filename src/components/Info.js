@@ -1,9 +1,11 @@
 const Info = ({ src, alt, text }) => {
   return (
-    <div>
-      <img src={src} alt={alt} />
-      <p>{text}</p>
-    </div>
+    <ul>
+      <li>
+        <img src={src} alt={alt} />
+        <p>{text}</p>
+      </li>
+    </ul>
   );
 };
 

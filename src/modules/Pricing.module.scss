@@ -1,5 +1,10 @@
 .Container {
   // border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   .PriceContainer {
     display: flex;
   }
@@ -39,5 +44,15 @@
     height: 25px;
     background: hsl(174, 86%, 45%);
     cursor: pointer;
+  }
+
+  .Billings {
+    display: flex;
+    // border: 1px solid black;
+    margin: 10px;
+  }
+
+  .Billings > * {
+    margin: 10px;
   }
 }

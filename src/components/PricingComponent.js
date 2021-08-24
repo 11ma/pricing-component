@@ -6,6 +6,9 @@ import {
   Container,
   Intro,
   PricingBody,
+  InfoBody,
+  InfoText,
+  InfoBtn,
 } from "../modules/PricingComponent.module.scss";
 
 const texts = ["Unlimited Websites", "100% data ownership", "Email reports"];
@@ -17,16 +20,14 @@ const PricingComponent = () => (
       <p>Sign-up for our 30-day trial. No credit card required.</p>
     </div>
     <div className={PricingBody}>
-      <div>
-        <Pricing />
-      </div>
-      <div>
-        <div>
+      <Pricing />
+      <div className={InfoBody}>
+        <div className={InfoText}>
           {texts.map((text) => (
             <Info key={text} src={checkMark} alt="checkMark" text={text} />
           ))}
         </div>
-        <div>
+        <div className={InfoBtn}>
           <button>Start my trial</button>
         </div>
       </div>
