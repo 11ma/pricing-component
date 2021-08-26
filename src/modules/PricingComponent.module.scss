@@ -1,14 +1,25 @@
 .Container {
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(../images/bg-pattern.svg);
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .Intro {
-    border: 1px solid black;
+    background-image: url(../images/pattern-circles.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    text-align: center;
+
     h1 {
       font-size: 30px;
       font-weight: 800;
+      // margin: 30px;
     }
     p {
       font-size: 15px;
@@ -16,22 +27,27 @@
   }
 
   .PricingBody {
-    border: 1px solid black;
+    background-color: hsl(0, 0%, 100%);
+    // border: 1px solid black;
+    border-radius: 10px;
     // padding: 50px;
   }
 
-  .InfoBody {
+  .InfoBody,
+  .InfoText,
+  .InfoText > * {
     display: flex;
+  }
+
+  .InfoBody {
     justify-content: space-around;
   }
 
   .InfoText {
-    display: flex;
     flex-direction: column;
   }
 
   .InfoText > * {
-    display: flex;
     align-items: center;
   }
 
