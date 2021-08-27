@@ -1,12 +1,5 @@
 .Container {
-  // border: 1px solid black;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-
   .PriceContainer {
-    // border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,10 +19,6 @@
       font-weight: 700;
     }
   }
-  .PriceContainer > * {
-    // margin: 50px;
-    // padding: 50px;
-  }
 
   .Slider {
     -webkit-appearance: none;
@@ -38,32 +27,46 @@
     background: hsl(224, 65%, 95%);
     outline: none;
     opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
     border-radius: 20px;
   }
 
-  /* .Slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border-radius: 50%;
-  appearance: none;
-  width: 45px;
-  height: 45px;
-  background-image: url(./images/icon-slider.svg);
-  border: 6px solid rgb(0, 105, 44);
-  cursor: pointer;
-} */
-  .Slider::-moz-range-thumb {
-    background-image: url(../images/icon-slider.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 20px;
+  /* for chrome */
+  .Slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    appearance: none;
     width: 35px;
     height: 35px;
     border: 1px solid rgb(0, 105, 44);
+    border-radius: 20px;
+    background-image: url(../images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: hsl(174, 86%, 45%);
-    cursor: pointer;
     box-shadow: 0px 5px 15px hsl(174, 86%, 45%);
+    cursor: pointer;
+    margin-top: -14px;
+  }
+
+  .Slider::-webkit-slider-runnable-track {
+    background-color: hsl(174, 77%, 80%);
+    width: 25px;
+    height: 10px;
+    border-radius: 20px;
+  }
+
+  /* for firefox */
+  .Slider::-moz-range-thumb {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgb(0, 105, 44);
+    border-radius: 20px;
+    background-image: url(../images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(174, 86%, 45%);
+    box-shadow: 0px 5px 15px hsl(174, 86%, 45%);
+    cursor: pointer;
   }
 
   .Slider::-moz-range-progress {
