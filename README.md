@@ -42,6 +42,8 @@ Users should be able to:
 ### Useful resources
 
 - [deploy react with surge](https://davidtang.io/2019-10-17-deploying-react-to-surge/) - deploying with surge.sh
+- [range slider on css tricsk](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [range slider on w3schools](https://www.w3schools.com/howto/howto_js_rangeslider.asp)
 
 ## Author
 
