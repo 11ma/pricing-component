@@ -6,10 +6,13 @@ import {
   PriceContainer,
   PageViews,
   PriceMonthYear,
+  PriceMonthYearMobile,
   Price,
   MonthYear,
   Slider,
   Billings,
+  Discount,
+  DiscountMobile,
 } from "../modules/Pricing.module.scss";
 
 const Pricing = () => {
@@ -53,6 +56,12 @@ const Pricing = () => {
         value={price}
         onChange={handleRangeSlider}
       />
+      <p className={PriceMonthYearMobile}>
+        <span className={Price}>
+          £{Number.parseFloat(applyDiscount()).toFixed(2)}
+        </span>{" "}
+        / <span className={MonthYear}>{checkMonthOrYear()}</span>
+      </p>
       <div className={Billings}>
         <p>monthly billing</p>
         <label>
@@ -61,10 +70,13 @@ const Pricing = () => {
             checked={check}
             uncheckedIcon={false}
             checkedIcon={false}
+            onColor={"#a5f3eb"}
+            offColor={"#eaeefb"}
           />
         </label>
         <p>yearly billing</p>
-        <p>25% discount</p>
+        <p className={Discount}>25% discount</p>
+        <p className={DiscountMobile}>-25%</p>
       </div>
     </div>
   );
