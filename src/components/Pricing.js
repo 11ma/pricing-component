@@ -16,7 +16,7 @@ import {
 } from "../modules/Pricing.module.scss";
 
 const Pricing = () => {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(16);
   const [check, setCheck] = useState(false);
 
   const handleRangeSlider = (event) => {
